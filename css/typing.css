@@ -1,0 +1,39 @@
+#dynamic-text{
+    margin-left: -20px;
+    line-height: 36px;
+    height: 33px;
+    overflow: hidden;
+}
+#dynamic-text li{
+    font-size: 18px;
+    color: rgb(218, 110, 10);
+    position: relative;
+    top: 0;
+    animation: slide 8s steps(2) infinite;
+}
+@keyframes slide {
+    100%{
+        overflow: hidden;
+        top: -70px;
+    }
+}
+#dynamic-text li span{
+    position: relative;
+}
+#dynamic-text li span::after{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    height: 130%;
+    width: 100%;
+    background: var(--container-color);
+    border-left: 2px solid rgb(218, 110, 10);
+    animation: typing 4s steps(20) infinite;
+}
+/* ++++++++++++++++++++Using Keyframe For Nav++++++++++++++++ */
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -25px 0 25px;
+    }
+}
